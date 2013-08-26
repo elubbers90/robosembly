@@ -8,7 +8,7 @@ public final class GridGenerator {
 	private static final int WIDTH = 5;
 	private static final int TP_BLOCK = 5;
 	private static final int POINT = 8;
-	private static final int BLOCK = 20;
+	private static final int BLOCK = 10;
 	private static final int L_ARROW = 10;
 	private static final int R_ARROW = 10;
 	private static long seed;
