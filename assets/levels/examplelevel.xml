@@ -1,0 +1,36 @@
+<level>
+	<levelInfo>
+		<name>Test Level</name>
+		<description>The test level!</description>
+		<author>me</author>
+	</levelInfo>
+	<game>
+		<type></type>
+		<time></time>
+		<numParts>1</numParts>
+	
+		<grid>
+			<gridX>2</gridX>
+    			<gridY>2</gridY>
+		</grid>
+	</game>
+	
+	<rows>
+	   <row>
+	      <square>
+		  <robot-head/>
+	      </square>
+	      <square>
+		  <bomb/>
+	      </square>
+	   </row>
+	   <row>
+	      <square>
+		  <conveyor-down/>
+	      </square>
+	      <square>
+		  <conveyor-left/>
+	      </square>
+	   </row>
+	</rows>
+</level>

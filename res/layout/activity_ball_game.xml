@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0"
+    tools:context=".BallGame" >
+
+	<RelativeLayout
+	    android:id="@+id/fullscreen_menu_controls"
+	    style="?buttonBarStyle"
+	    android:layout_width="68dp"
+	    android:layout_height="match_parent"
+	    android:background="@color/black_overlay"
+	    android:orientation="horizontal"
+	    tools:ignore="UselessParent" >
+	
+	    <Button
+	        android:id="@+id/menu_button"
+	        style="?buttonBarButtonStyle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/menu_button" 
+	        android:onClick="backToMenu"/>
+	    
+	    <TextView
+	        android:id="@+id/game_score"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/menu_button"
+	        android:text="@string/dummy_content"
+	        android:textColor="#33b5e5"
+	        android:textSize="12sp"
+	        android:textStyle="bold" />
+	    
+	    <Button
+	        android:id="@+id/settings_game_button"
+	        style="?buttonBarButtonStyle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/settings_game_button" 
+	        android:layout_below="@id/game_score"/>
+	</RelativeLayout>
+
+    <!--<TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        &lt;!&ndash; ball column &ndash;&gt;
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:text="@string/dummyGrid"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Button
+                android:id="@+id/button1"
+                android:text="@string/dummyGrid" />
+        </TableRow>
+
+        &lt;!&ndash; just draw a red line &ndash;&gt;
+        <View
+            android:layout_height="2dip"
+            android:background="#FF0000" />
+
+        <TableRow android:layout_height="wrap_content">
+             <TextView
+                 android:id="@+id/runLabel"
+                 android:text="R"
+                 android:layout_height="wrap_content"
+                 />
+             <TextView
+                 android:id="@+id/hitLabel"
+                 android:text="H"
+                 android:layout_height="wrap_content"
+                 />
+             <TextView
+                 android:id="@+id/errorLabel"
+                 android:text="E"
+                 android:layout_height="wrap_content"
+                 />
+         </TableRow>
+
+        &lt;!&ndash; 3 columns &ndash;&gt;
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+            <TextView
+                android:id="@+id/textView2"
+                android:text="@string/dummyGrid"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:id="@+id/button2"
+                android:text="@string/dummyGrid"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="2"/>
+            <TextView
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="3"/>
+            <TextView
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="4"/>
+            <TextView
+                android:id="@+id/button6"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="5"/>
+            <TextView
+                android:id="@+id/button7"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="6"/>
+            <TextView
+                android:id="@+id/button8"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="7"/>
+            <TextView
+                android:id="@+id/button9"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="8"/>
+            <TextView
+                android:id="@+id/button10"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="9"/>
+            <TextView
+                android:id="@+id/button11"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="10"/>
+            <TextView
+                android:id="@+id/button12"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="11"/>
+            <TextView
+                android:id="@+id/button13"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="12"/>
+            <TextView
+                android:id="@+id/button14"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="13"/>
+            <TextView
+                android:id="@+id/button15"
+                android:layout_width="0dp"
+                android:text="@string/dummyGrid"
+                android:layout_column="14"/>
+        </TableRow>
+
+        &lt;!&ndash; display this button in 3rd column via layout_column(zero based) &ndash;&gt;
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <Button
+                android:id="@+id/buton4"
+                android:layout_column="2"
+                android:text="Column 3" />
+        </TableRow>
+
+        &lt;!&ndash; display this button in 2nd column via layout_column(zero based) &ndash;&gt;
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <Button
+                android:id="@+id/butto5"
+                android:layout_column="1"
+                android:text="Column 2" />
+        </TableRow>
+
+    </TableLayout>-->
+
+</LinearLayout>
